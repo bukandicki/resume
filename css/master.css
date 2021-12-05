@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    padding: 1.875rem 9.75rem;
+}
+
+body::-webkit-scrollbar {
+    width: .25rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 1rem;
+}
+
+.app__gretting {
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.app__name {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.app__desc {
+    max-width: 46.875rem;
+    line-height: 2.4rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    word-break: break-word;
+}
+
+.app__mark {
+    position: relative;
+}
+
+.app__mark::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 60%;
+    left: -0.1em;
+    right: -0.1em;
+    bottom: 0;
+    transition: top .3s cubic-bezier(0, 0.8, 0.13, 1);
+    background-color: rgba(79, 192, 141, 0.5);
+}
+
+.app__mark:hover::after {
+    top: 0%;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        padding: 2rem;
+    }
+}
+
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+} */
